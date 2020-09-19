@@ -122,7 +122,7 @@ if (
     appBuild: resolveOwn('../../build'),
     appPublic: resolveOwn(`${templatePath}/public`),
     appHtml: resolveOwn(`${templatePath}/public/index.html`),
-    appIndexJs: resolveModule(resolveOwn, `${templatePath}/src/index`),
+    appIndexJs: resolveModule(resolveOwn, process.env.APP_ENTRY || `${templatePath}/src/index`),
     appPackageJson: resolveOwn('package.json'),
     appSrc: resolveOwn(`${templatePath}/src`),
     appTsConfig: resolveOwn(`${templatePath}/tsconfig.json`),
